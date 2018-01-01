@@ -12,7 +12,7 @@
  * Created:   20.11.2015 <mwilck@arcor.de>
  *
  */
-
+#define _BSD_SOURCE
 #include <string.h>
 #include <errno.h>
 #include <endian.h>

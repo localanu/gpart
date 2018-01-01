@@ -16,12 +16,12 @@
 
 #ifndef _GPART_H
 #define _GPART_H
-
+#define _BSD_SOURCE
 #include "config.h"
 
 #include "errmsgs.h"
 #include "l64seek.h"
-
+#include <endian.h>
 #include <stdint.h>
 
 typedef uint8_t byte_t;
