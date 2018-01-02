@@ -103,9 +103,10 @@ static void os_disk_geometry(disk_desc *d, struct disk_geom *g)
 static void os_disk_geometry(disk_desc *d, struct disk_geom *g)
 {
 device_geometry dg;
+ioctl(d->d_fd, B_GET_GEOMETRY, & dg);
 g -> d_h = dg.head_count;
 g -> d_c = dg.cylinder_count;
-g -> d_s = dg.sectors_per_track;
+//g -> d_s = dg.sectors_per_track * dg.head_count;
 }
 #endif
 
