@@ -106,7 +106,7 @@ device_geometry dg;
 ioctl(d->d_fd, B_GET_GEOMETRY, & dg);
 g -> d_h = dg.head_count;
 g -> d_c = dg.cylinder_count;
-//g -> d_s = dg.sectors_per_track * dg.head_count;
+g -> d_s = dg.sectors_per_track * dg.cylinder_count;
 }
 #endif
 
